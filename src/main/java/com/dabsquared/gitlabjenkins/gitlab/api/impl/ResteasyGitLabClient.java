@@ -66,6 +66,16 @@ final class ResteasyGitLabClient implements GitLabClient {
     }
 
     @Override
+    public void changeBuildStatus(String projectId, String sha, BuildState state, String ref, String context, String targetUrl, String description, Float coverage) {
+        api.changeBuildStatus(projectId, sha, state, ref, context, targetUrl, description, coverage);
+    }
+
+    @Override
+    public void changeBuildStatus(Integer projectId, String sha, BuildState state, String ref, String context, String targetUrl, String description, Float coverage) {
+        api.changeBuildStatus(projectId, sha, state, ref, context, targetUrl, description, coverage);
+    }
+
+    @Override
     public void getCommit(String projectId, String sha) {
         api.getCommit(projectId, sha);
     }

@@ -88,7 +88,8 @@ interface V3GitLabApiProxy extends GitLabApiProxy {
                            @FormParam("ref") String ref,
                            @FormParam("context") String context,
                            @FormParam("target_url") String targetUrl,
-                           @FormParam("description") String description);
+                           @FormParam("description") String description,
+                           @FormParam("coverage") Float coverage);
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
@@ -101,7 +102,8 @@ interface V3GitLabApiProxy extends GitLabApiProxy {
                            @FormParam("ref") String ref,
                            @FormParam("context") String context,
                            @FormParam("target_url") String targetUrl,
-                           @FormParam("description") String description);
+                           @FormParam("description") String description,
+                           @FormParam("coverage") Float coverage);
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

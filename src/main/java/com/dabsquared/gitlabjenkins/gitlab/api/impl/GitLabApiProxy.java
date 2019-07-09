@@ -24,6 +24,10 @@ interface GitLabApiProxy {
 
     void changeBuildStatus(Integer projectId, String sha, BuildState state, String ref, String context, String targetUrl, String description);
 
+    void changeBuildStatus(String projectId, String sha, BuildState state, String ref, String context, String targetUrl, String description, Float coverage);
+
+    void changeBuildStatus(Integer projectId, String sha, BuildState state, String ref, String context, String targetUrl, String description, Float coverage);
+
     void getCommit(String projectId, String sha);
 
     void acceptMergeRequest(Integer projectId, Integer mergeRequestId, String mergeCommitMessage, boolean shouldRemoveSourceBranch);
